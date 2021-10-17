@@ -5,61 +5,27 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        System.out.println("BUGÜN NE YAPSAMMM ... ");
 Scanner k = new Scanner(System.in);
-System.out.println("yeni profil için  telefon numarası ve şifre giriniz");
-int  telNo=k.nextInt();
-int şifre = k.nextInt();
-        System.out .println(" telefon numaranızı   giriniz... ");
-  int  kullanıcı=k.nextInt();
-      if (kullanıcı==telNo) ;
-      else {
-          System.out.println( "yanlış numara  girdiniz \ntel numaranızı değiştirmek için 1 i tuşlayın\n" +
-                  "değiştirmek istemiyosanız programı tekrar başlatın");
-          int konsol= k.nextInt();
-          switch (konsol){
-              case 1: {
-                  int yeniTelno = k.nextInt();
-                  telNo = yeniTelno;
-                  System.out.println(" numaranız güncellendi " + telNo);
-                  break;
-              } default:System.out.println( "yanlış tuşa tuşladınız program sonlanmıştır....");
-                  break;
-            }}
-              System.out.println(" şifrenizi giriniz ");
-                  int şifreGiriş=k.nextInt();
-                  if (şifre== şifreGiriş) ;
-                  else{
-                      System.out.println( "yanlış şifre  girdiniz \nşifrenizi  değiştirmek için 1 i tuşlayın\n" +
-                              "değiştirmek istemiyosanız programı tekrar başlatın");
-                      int konsol1=k.nextInt();
-                      switch (konsol1){
-                          case 1:{  int yeniş=k.nextInt();
-                              if(yeniş==şifre){
-                                  System.out.println("önceki şifrenizi girdiniz program sonlanıyor");
-                                  break;
-                              }
-                              else {
-                                  şifre =yeniş;
-                              System.out.println(" şifren oluşturuldu "+şifre);
-                              }
-                              break;
-                          }
-                          default: System.out.println(" yanlış tuşlama yaptınız program sonlandı");
-                            break;
+ System.out.println(" bir hava sıcaklığı söyleyin ");
+ int hava =k.nextInt();
+  if (0 < hava && hava< 25){
+      if(0 < hava && hava< 5){
+          System.out.println(" kayak yapabilirsin");
+      }
+      else if (5 < hava && hava< 15){
+          System.out.println(" Sinemaya gidebilirsin");
+      }
+      else if(15 < hava && hava< 25){
+          System.out.println("piknik yapabilirsin");
+      }
 
-
-
-
-                      }
-
-                  }
-
-
-
-
-
-
-
-
+  }
+  else if(0> hava){
+      System.out.println(" kambini aç netflix izle :)");
+  }
+  else  if  (hava>25) {
+      System.out.println("klimanı aç dizi izle veya yüzmeye git ");
+        }
     }
 }
