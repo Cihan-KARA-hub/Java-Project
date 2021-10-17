@@ -5,35 +5,60 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	Scanner k= new Scanner(System.in);
-	System.out. println("toplama 1 \n çıkarma 2\n çarpma 3\n bölme 4 \n işlem seçiniz:" );
-	int select=k.nextInt();
-		System.out. println("  1. sayıyı girin ");
-	int a=k.nextInt();
-		System.out. println(" 2. sayıyı girin... ");
-	int b=k.nextInt();
-	  switch (select){
-		case 1:
-			System.out. println(" sonuç"+a+b);
-		break;
+Scanner k = new Scanner(System.in);
+System.out.println("yeni profil için  telefon numarası ve şifre giriniz");
+int  telNo=k.nextInt();
+int şifre = k.nextInt();
+        System.out .println(" telefon numaranızı   giriniz... ");
+  int  kullanıcı=k.nextInt();
+      if (kullanıcı==telNo) ;
+      else {
+          System.out.println( "yanlış numara  girdiniz \ntel numaranızı değiştirmek için 1 i tuşlayın\n" +
+                  "değiştirmek istemiyosanız programı tekrar başlatın");
+          int konsol= k.nextInt();
+          switch (konsol){
+              case 1: {
+                  int yeniTelno = k.nextInt();
+                  telNo = yeniTelno;
+                  System.out.println(" numaranız güncellendi " + telNo);
+                  break;
+              } default:System.out.println( "yanlış tuşa tuşladınız program sonlanmıştır....");
+                  break;
+            }}
+              System.out.println(" şifrenizi giriniz ");
+                  int şifreGiriş=k.nextInt();
+                  if (şifre== şifreGiriş) ;
+                  else{
+                      System.out.println( "yanlış şifre  girdiniz \nşifrenizi  değiştirmek için 1 i tuşlayın\n" +
+                              "değiştirmek istemiyosanız programı tekrar başlatın");
+                      int konsol1=k.nextInt();
+                      switch (konsol1){
+                          case 1:{  int yeniş=k.nextInt();
+                              if(yeniş==şifre){
+                                  System.out.println("önceki şifrenizi girdiniz program sonlanıyor");
+                                  break;
+                              }
+                              else {
+                                  şifre =yeniş;
+                              System.out.println(" şifren oluşturuldu "+şifre);
+                              }
+                              break;
+                          }
+                          default: System.out.println(" yanlış tuşlama yaptınız program sonlandı");
+                            break;
 
-		case 2:
-			System.out. println(" sonuç "+ (a-b));
-		break;
 
-		case 3:
-			System.out. println(" sonuç "+a*b);
-		break;
 
-		case 4:
-			System.out. println(" sonnuç "+a/b);
-		break;
 
-		default:
-			System.out. println(" yanlış işlem yaptınız ");
-		break;
+                      }
 
-    }
+                  }
+
+
+
+
+
+
 
 
     }
